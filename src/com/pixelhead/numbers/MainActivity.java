@@ -1,17 +1,27 @@
 package com.pixelhead.numbers;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
+import android.support.v7.app.ActionBarActivity;
+import android.text.format.DateFormat;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 	
-	private TextView year;
-	private TextView month;
-	private TextView day;
+	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("cccc, MMMM d");
+	private static final SimpleDateFormat DATE_NUMERIC_FORMAT = new SimpleDateFormat("yyyy MM dd");
+	
+	private TextView time;
+	private TextView dateText;
+	private TextView dateNumeric;
 	
 	private Handler handler = new Handler();
 
@@ -19,9 +29,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		year = (TextView) findViewById(R.id.year);
-		month = (TextView) findViewById(R.id.month);
-		day = (TextView) findViewById(R.id.day);
+		time = (TextView) findViewById(R.id.time);
+		dateText = (TextView) findViewById(R.id.date_text);
+		dateNumeric = (TextView) findViewById(R.id.date_numeric);
+		if (Build.VERSION.SDK_INT < 11){
+		    getSupportActionBar().hide(); 
+		}
 	}
 	
 	@Override
@@ -41,11 +54,13 @@ public class MainActivity extends Activity {
 		
 		@Override
 		public void run() {
-			Calendar calendar = Calendar.getInstance();
-			year.setText(String.valueOf(calendar.get(Calendar.YEAR)));
-			month.setText(String.valueOf(calendar.get(Calendar.MONTH) + 1));
-			day.setText(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)));
-			handler.postDelayed(updateTask, 900);
+			Date date = Calendar.getInstance().getTime();
+			time.setText(DateFormat.getTimeFormat(MainActivity.this).format(date));
+			dateText.setText(DATE_FORMAT.format(date));
+			dateNumeric.setText(DATE_NUMERIC_FORMAT.format(date));
+			long now = SystemClock.uptimeMillis();
+			long next = now + (1000 - now % 1000);
+			handler.postAtTime(updateTask, next);
 		}
 	};
 }
