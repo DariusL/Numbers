@@ -3,7 +3,9 @@ package com.pixelhead.numbers;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Build;
@@ -16,8 +18,8 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 	
-	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("cccc, MMMM d");
-	private static final SimpleDateFormat DATE_NUMERIC_FORMAT = new SimpleDateFormat("yyyy MM dd");
+	private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("cccc, MMMM d", Locale.getDefault());
+	private static final SimpleDateFormat DATE_NUMERIC_FORMAT = new SimpleDateFormat("yyyy MM dd", Locale.getDefault());
 	
 	private TextView time;
 	private TextView dateText;

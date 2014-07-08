@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:paddingBottom="130dp" >
 
-        <com.pixelhead.numbers.HoloTextView
+        <com.pixelhead.numbers.ThinTextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,9 +21,9 @@
             android:layout_centerHorizontal="true"
             android:text="18:29"
             android:textColor="@android:color/white"
-            android:textSize="22sp" />
+            android:textSize="56sp" />
         
-        <com.pixelhead.numbers.HoloTextView 
+        <com.pixelhead.numbers.LigthTextView 
             android:id="@+id/date_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,9 +32,9 @@
             android:layout_marginTop="40dp"
             android:text="Monday, July 7"
             android:textColor="@android:color/white"
-            android:textSize="18sp"/>
+            android:textSize="24sp"/>
         
-        <com.pixelhead.numbers.HoloTextView 
+        <com.pixelhead.numbers.LigthTextView 
             android:id="@+id/date_numeric"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_marginTop="10dp"
             android:text="2014 07 07"
             android:textColor="@android:color/white"
-            android:textSize="12sp"/>
+            android:textSize="14sp"/>
     </RelativeLayout>
 
 </FrameLayout>
