@@ -31,6 +31,7 @@ public class LigthTextView extends TextView {
 	}
 	
 	private void setup(Context context){
-		setTypeface(getFont(context));
+		if(!isInEditMode())
+			setTypeface(getFont(context));
 	}
 }

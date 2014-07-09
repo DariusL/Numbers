@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingBottom="130dp" >
+        android:layout_marginBottom="50dp" >
 
         <com.pixelhead.numbers.ThinTextView
             android:id="@+id/time"
@@ -32,7 +32,7 @@
             android:layout_marginTop="40dp"
             android:text="Monday, July 7"
             android:textColor="@android:color/white"
-            android:textSize="24sp"/>
+            android:textSize="20sp"/>
         
         <com.pixelhead.numbers.LigthTextView 
             android:id="@+id/date_numeric"
@@ -43,7 +43,7 @@
             android:layout_marginTop="10dp"
             android:text="2014 07 07"
             android:textColor="@android:color/white"
-            android:textSize="14sp"/>
+            android:textSize="16sp"/>
     </RelativeLayout>
 
 </FrameLayout>
