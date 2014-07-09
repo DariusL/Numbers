@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="50dp" >
 
-        <com.pixelhead.numbers.ThinTextView
+        <com.pixelhead.time_and_date.ThinTextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:textColor="@android:color/white"
             android:textSize="56sp" />
         
-        <com.pixelhead.numbers.LigthTextView 
+        <com.pixelhead.time_and_date.LigthTextView 
             android:id="@+id/date_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:textColor="@android:color/white"
             android:textSize="20sp"/>
         
-        <com.pixelhead.numbers.LigthTextView 
+        <com.pixelhead.time_and_date.LigthTextView 
             android:id="@+id/date_numeric"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

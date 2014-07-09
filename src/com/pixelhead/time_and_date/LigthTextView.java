@@ -1,4 +1,4 @@
-package com.pixelhead.numbers;
+package com.pixelhead.time_and_date;
 
 import android.content.Context;
 import android.graphics.Typeface;

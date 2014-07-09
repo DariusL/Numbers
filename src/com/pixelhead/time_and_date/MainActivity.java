@@ -1,4 +1,4 @@
-package com.pixelhead.numbers;
+package com.pixelhead.time_and_date;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
